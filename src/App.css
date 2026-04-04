@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Stardos+Stencil:wght@400;700&display=swap');
+
+/* THEME + TYPOGRAPHY VARIABLES */
+:root {
+  --bg: #fafafa;
+  --text: #1d1c1c;
+
+  --accent-teal: #00c7b7;
+  --accent-pink: #ff2fa0;
+  --accent-purple: #7b4bff;
+  --accent-lime: #baff00;
+
+  --font-body: 'Martel Sans', sans-serif;
+  --font-display: 'Stardos Stencil', sans-serif;
+
+  --size-body: 1.2rem;
+  --size-h1: 4rem;
+  --size-h2: 2.2rem;
+  --size-h3: 1.6rem;
+
+  --lh-body: 1.65;
+  --lh-heading: 1.15;
+}
+
+[data-theme="dark"] {
+  --bg: #1b1a1a;
+  --text: #efe8e8;
+}
+
+/* BODY TEXT */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--size-body);
+  line-height: var(--lh-body);
+  transition: background .3s ease, color .3s ease;
+}
+
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  line-height: var(--lh-heading);
+  margin: 0;
+}
+
+h1 { font-size: var(--size-h1); letter-spacing: -1px; }
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+
+/* LAYOUT */
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-content: center;
+  place-items: center;
+  flex-grow: 1;
+}
+
+/* THEME TOGGLE */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: 1px solid var(--text);
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.tag {
+  padding: 6px 14px;
+  border: 2px solid var(--accent-pink);
+  color: var(--accent-pink);
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all .2s ease;
+}
+
+/* Hover: fill the tag */
+.tag:hover {
+  background: var(--accent-pink);
+  color: #fff;
+}
+
+.tag:nth-child(1) { border-color: var(--accent-teal); color: var(--accent-teal); }
+.tag:nth-child(1):hover { background: var(--accent-teal); color: #fff;}
+
+.tag:nth-child(2) { border-color: var(--accent-pink); color: var(--accent-pink); }
+.tag:nth-child(2):hover { background: var(--accent-pink); color: #fff; }
+
+.tag:nth-child(3) { border-color: var(--accent-purple); color: var(--accent-purple); }
+.tag:nth-child(3):hover { background: var(--accent-purple); color: #fff;}
+
+.tag:nth-child(4) { border-color: var(--accent-lime); color: var(--accent-lime); }
+.tag:nth-child(4):hover { background: var(--accent-lime); color: #111;}
+
+.tag:nth-child(5) { border-color: var(--accent-teal); color: var(--accent-teal); }
+.tag:nth-child(5):hover { background: var(--accent-teal); color: #fff;}
+
+
+.nav {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav-logo {
+  height: 2em;
+  width: auto;
+  margin-right: 12px;
+  display: block;
+}
+
+.hero-full {
+  width: 100%;
+  height: 60vh; /* adjust: 50–80vh depending on vibe */
+  opacity: 0.8;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0; /* full-bleed look */
+  
+  /* Fade-in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFade 1.2s ease-out forwards;
+}
+
+@keyframes heroFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hide hamburger on desktop */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+/* Nav links container */
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 700px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 8px;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+
+
+
+

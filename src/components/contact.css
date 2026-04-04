@@ -1,0 +1,106 @@
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background image */
+.contact-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.contact-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .9;
+  filter: brightness(0.7);
+}
+
+/* Form wrapper – solid, readable, editorial */
+.contact-wrapper {
+  background: var(--bg);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 90%;
+  border: 3px solid var(--accent-pink);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-size: var(--size-h1);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Form fields */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 6px;
+  border: 2px solid var(--text);
+  background: var(--bg); /* solid background for readability */
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Newsletter checkbox */
+.newsletter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.newsletter input {
+  accent-color: var(--accent-teal);
+}
+
+/* Submit button styled like your neon tags */
+.submit-btn {
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .contact-wrapper {
+    padding: 30px;
+  }
+}
+
+.contact-success {
+  padding-top: 120px;
+  text-align: center;
+  color: var(--text);
+}
+
+.contact-success h1 {
+  font-size: var(--size-h1);
+  margin-bottom: 10px;
+}
+
+.contact-success p {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}

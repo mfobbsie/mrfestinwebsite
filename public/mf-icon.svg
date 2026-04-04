@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <style>
+    /* Micro-bounce animation */
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-6px); }
+      100% { transform: translateY(0); }
+    }
+
+    text {
+      animation: float 3s ease-in-out infinite;
+      transition: fill .25s ease, transform .25s ease;
+    }
+
+    /* Hover animation */
+    svg:hover rect {
+      stroke: #ff2fa0; /* outline turns pink on hover */
+    }
+
+    svg:hover text {
+      fill: #ffffff; /* letters turn white on hover */
+      transform: translateY(-10px); /* extra lift on hover */
+    }
+  </style>
+
+  <!-- Neon outlined square -->
+  <rect
+    x="32"
+    y="32"
+    width="448"
+    height="448"
+    rx="32"
+    ry="32"
+    fill="none"
+    stroke="#00c7b7"
+    stroke-width="32"
+  />
+
+  <!-- lowercase m f in neon pink -->
+  <text
+    x="50%"
+    y="55%"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="'Stardos Stencil', system-ui, sans-serif"
+    font-size="220"
+    fill="#ff2fa0"
+  >
+    mf
+  </text>
+</svg>
+
