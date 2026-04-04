@@ -1,0 +1,21 @@
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Glow -->
+  <filter id="limeGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Cart outline -->
+  <g stroke="#baff00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+     filter="url(#limeGlow)">
+    <path d="M3 3h2l3 12h11l3-8H6" />
+    <circle cx="9" cy="19" r="1.5" />
+    <circle cx="18" cy="19" r="1.5" />
+  </g>
+
+</svg>

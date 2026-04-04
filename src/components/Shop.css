@@ -1,0 +1,103 @@
+/*Shop.css*/
+
+.shop-page {
+  padding-top: 200px; 
+  padding-bottom: 80px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Cart icon in top-right */
+.shop-cart-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  height: auto;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.shop-cart-icon:hover {
+  transform: scale(1.1);
+}
+
+.shop-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: var(--font-display);
+  font-size: var(--size-h1);
+}
+
+/* Grid layout */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* Category cards */
+.shop-card {
+  border: 3px solid;
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--bg);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.shop-card h2 {
+  font-family: var(--font-display);
+  margin-bottom: 12px;
+}
+
+.coming-soon {
+  font-size: 1rem;
+  color: var(--text);
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hover effect */
+.shop-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-lime);
+}
+
+/* Fade-on-scroll support */
+.fade-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.shop-cart-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 42px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.shop-cart-icon:hover {
+  transform: scale(1.1);
+}
+@keyframes microBounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-4px); }
+  60%  { transform: translateY(0); }
+  80%  { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+.shop-cart-icon:hover {
+  animation: microBounce 0.45s ease-out;
+}
