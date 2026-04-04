@@ -21,11 +21,14 @@
 
   --lh-body: 1.65;
   --lh-heading: 1.15;
+
+  --tag-accent: var(--accent-purple);
 }
 
 [data-theme="dark"] {
   --bg: #1b1a1a;
   --text: #efe8e8;
+  --tag-accent: var(--accent-lime);
 }
 
 /* BODY TEXT */

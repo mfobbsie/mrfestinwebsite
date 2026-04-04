@@ -8,6 +8,7 @@ import About from "./components/about";
 import Contact from "./components/contact";
 import Gallery from "./components/gallery";
 import Shop from "./components/shop";
+import Blog from "./components/blog";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,6 +64,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/shop" element={<Shop />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
     </>
   );
