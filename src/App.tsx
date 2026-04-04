@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <nav className="nav">
-        <img src="/mf-icon.svg" alt="mf logo" className="nav-logo" />
+        <img src="/mffavicon.png" alt="mf logo" className="nav-logo" />
 
         {/* Hamburger button */}
         <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
