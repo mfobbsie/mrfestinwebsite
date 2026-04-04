@@ -1,9 +1,12 @@
+/*App.tsx*/
+
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./components/home";
 import About from "./components/about";
 import Contact from "./components/contact";
+import Gallery from "./components/gallery";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,25 +19,6 @@ function App() {
       current === "dark" ? "light" : "dark",
     );
   };
-
-  // ✨ scroll-fade animation 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    const el = document.querySelector(".fade-on-scroll");
-    if (el) observer.observe(el);
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <>
@@ -76,6 +60,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </>
   );
