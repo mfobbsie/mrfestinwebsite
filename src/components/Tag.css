@@ -9,14 +9,12 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
+
+  color: var(--text); 
 }
 
-.tag-pill:hover {
-  background: currentColor;
-  color: #111;
-}
-
+.tag-pill:hover,
 .tag-pill.active {
-  background: currentColor;
-  color: #111;
+  background: var(--tag-accent); /* use borderColor as background */
+  color: var(--tag-hover-text);
 }

@@ -4,7 +4,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import "./Blog.css";
 import PullQuote from "./PullQuote";
-import Tag from "./Tag";
+import Tag from "../components/Tag";
 
 interface BlogPost {
   title: string;
@@ -67,6 +67,15 @@ export default function Blog() {
     ? posts.filter((p) => p.tags.includes(activeTag))
     : posts;
 
+  const tagAccents: Record<string, string> = {
+    studio: "var(--accent-teal)",
+    process: "var(--accent-teal)",
+    art: "var(--accent-pink)",
+    neon: "var(--accent-lime)",
+    identity: "var(--accent-lime)",
+  };
+
+
   return (
     <section className="blog-page">
       <h1 className="blog-title">Blog</h1>
@@ -77,7 +86,7 @@ export default function Blog() {
           <Tag
             key={tag}
             label={tag}
-            accent="var(--tag-accent)"
+            accent={tagAccents[tag]}
             active={activeTag === tag}
             onClick={() => setActiveTag(activeTag === tag ? null : tag)}
           />

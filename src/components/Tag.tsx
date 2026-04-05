@@ -1,5 +1,3 @@
-/*Tag.tsx*/
-
 import "./Tag.css";
 
 interface TagProps {
@@ -18,7 +16,12 @@ export default function Tag({
   return (
     <button
       className={`tag-pill ${active ? "active" : ""}`}
-      style={{ borderColor: accent, color: accent }}
+      style={
+        {
+          borderColor: accent,
+          "--tag-accent": accent,
+        } as React.CSSProperties & { "--tag-accent": string }
+      }
       onClick={onClick}
     >
       {label}

@@ -23,12 +23,14 @@
   --lh-heading: 1.15;
 
   --tag-accent: var(--accent-purple);
+  --tag-hover-text: #fff;
 }
 
 [data-theme="dark"] {
   --bg: #1b1a1a;
   --text: #efe8e8;
   --tag-accent: var(--accent-lime);
+  --tag-hover-text: #111;
 }
 
 /* BODY TEXT */
@@ -87,7 +89,7 @@ h3 { font-size: var(--size-h3); }
   color: var(--text);
 }
 
-.tag {
+.nav-tag {
   padding: 6px 14px;
   border: 2px solid var(--accent-pink);
   color: var(--accent-pink);
@@ -102,25 +104,25 @@ h3 { font-size: var(--size-h3); }
 }
 
 /* Hover: fill the tag */
-.tag:hover {
+.nav-tag:hover {
   background: var(--accent-pink);
   color: #fff;
 }
 
-.tag:nth-child(1) { border-color: var(--accent-teal); color: var(--accent-teal); }
-.tag:nth-child(1):hover { background: var(--accent-teal); color: #fff;}
+.nav-tag:nth-child(1) { border-color: var(--accent-teal); color: var(--accent-teal); }
+.nav-tag:nth-child(1):hover { background: var(--accent-teal); color: #fff;}
 
-.tag:nth-child(2) { border-color: var(--accent-pink); color: var(--accent-pink); }
-.tag:nth-child(2):hover { background: var(--accent-pink); color: #fff; }
+.nav-tag:nth-child(2) { border-color: var(--accent-pink); color: var(--accent-pink); }
+.nav-tag:nth-child(2):hover { background: var(--accent-pink); color: #fff; }
 
-.tag:nth-child(3) { border-color: var(--accent-purple); color: var(--accent-purple); }
-.tag:nth-child(3):hover { background: var(--accent-purple); color: #fff;}
+.nav-tag:nth-child(3) { border-color: var(--accent-purple); color: var(--accent-purple); }
+.nav-tag:nth-child(3):hover { background: var(--accent-purple); color: #fff;}
 
-.tag:nth-child(4) { border-color: var(--accent-lime); color: var(--accent-lime); }
-.tag:nth-child(4):hover { background: var(--accent-lime); color: #111;}
+.nav-tag:nth-child(4) { border-color: var(--accent-lime); color: var(--accent-lime); }
+.nav-tag:nth-child(4):hover { background: var(--accent-lime); color: #111;}
 
-.tag:nth-child(5) { border-color: var(--accent-teal); color: var(--accent-teal); }
-.tag:nth-child(5):hover { background: var(--accent-teal); color: #fff;}
+.nav-tag:nth-child(5) { border-color: var(--accent-teal); color: var(--accent-teal); }
+.nav-tag:nth-child(5):hover { background: var(--accent-teal); color: #fff;}
 
 
 .nav {

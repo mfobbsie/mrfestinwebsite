@@ -28,46 +28,40 @@ export default function About() {
       {/* Main content */}
       <div className="about-content fade-on-scroll">
         <h1 className="about-title">About</h1>
-
-        <div className="about-grid">
           <div className="about-text">
             <p>
-              I’m Mary Fobbs‑Guillory — a creative technologist, designer, and
-              software‑engineering transitioner building digital spaces that
-              feel intentional, editorial, and alive.
+              Mr. Festin is the pen name of a Bay Area–based artist whose work
+              drifts between the playful and the uncanny. His world is built
+              from neon edges, soft shadows, and the quiet tension between order
+              and improvisation. What begins as a sketch or a fragment often
+              grows into something stranger — a character, a symbol, a small
+              universe with its own rules.
+            </p>
+            <p>
+              Working across illustration, mixed media, and digital
+              experimentation, Mr. Festin treats each piece as a conversation
+              with curiosity itself. He’s drawn to textures that feel lived‑in,
+              colors that hum with energy, and stories that reveal themselves
+              slowly. His process is equal parts intuition and craft: layering,
+              erasing, rebuilding, and letting accidents become part of the
+              final language.
+            </p>
+            <p>
+              The name mr. festin is a reminder not to take the work too
+              seriously — to stay open, playful, and a little mischievous.
+              Behind the scenes, he’s constantly collecting moments: a crooked
+              sign, a forgotten object, a flash of neon on a rainy night. These
+              fragments become the raw material for a visual world that feels
+              both familiar and dreamlike.
             </p>
 
             <p>
-              My work blends UI design, storytelling, and clean engineering
-              patterns. I love neon accents, soft grids, and interfaces that
-              feel like curated objects rather than templates.
-            </p>
-
-            <p>
-              I’m currently building a portfolio of interactive projects in
-              JavaScript, React, Python, and SQL — always with an eye toward
-              clarity, craft, and community.
+              Whether he’s sketching in a notebook, building a digital
+              composition, or experimenting with new mediums, Mr. Festin’s work
+              invites viewers to linger, look closer, and step into a story
+              that’s still unfolding.
             </p>
           </div>
-
-          <div className="about-details">
-            <h3>Focus Areas</h3>
-            <ul>
-              <li>Frontend development (React, TypeScript)</li>
-              <li>UI/UX design & branding</li>
-              <li>Python + backend fundamentals</li>
-              <li>Creative coding & interactive media</li>
-            </ul>
-
-            <h3>Currently Exploring</h3>
-            <ul>
-              <li>Neon‑accented UI systems</li>
-              <li>Responsive editorial layouts</li>
-              <li>Portfolio storytelling</li>
-              <li>Design systems & component libraries</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -33,22 +33,22 @@ function App() {
         </button>
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-          <Link to="/" className="tag">
+          <Link to="/" className="nav-tag">
             home
           </Link>
-          <Link to="/about" className="tag">
+          <Link to="/about" className="nav-tag">
             about
           </Link>
-          <Link to="/gallery" className="tag">
+          <Link to="/gallery" className="nav-tag">
             gallery
           </Link>
-          <Link to="/contact" className="tag">
+          <Link to="/contact" className="nav-tag">
             contact
           </Link>
-          <Link to="/blog" className="tag">
+          <Link to="/blog" className="nav-tag">
             blog
           </Link>
-          <Link to="/shop" className="tag">
+          <Link to="/shop" className="nav-tag">
             shop
           </Link>
         </div>
