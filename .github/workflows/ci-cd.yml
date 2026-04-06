@@ -33,12 +33,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # UPDATED ↓↓↓
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: production-build
-          path: build/
+          path: dist/
 
   deploy:
     name: Deploy to Vercel
@@ -50,12 +49,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # UPDATED ↓↓↓
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
           name: production-build
-          path: build
+          path: dist
 
       - name: Deploy to Vercel
         run: |
