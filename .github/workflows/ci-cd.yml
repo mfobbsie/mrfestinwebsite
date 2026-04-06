@@ -55,6 +55,12 @@ jobs:
           name: production-build
           path: dist
 
+      # 🔍 DEBUG STEP — this prints ALL environment variables
+      - name: Debug environment
+        run: |
+          echo "=== ENVIRONMENT VARIABLES ==="
+          printenv | sort
+
       - name: Release Build
         env:
           VERCEL_ACCESS_TOKEN: ${{ secrets.VERCEL_ACCESS_TOKEN }}
