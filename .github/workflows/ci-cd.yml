@@ -33,8 +33,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      # UPDATED ↓↓↓
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: production-build
           path: build/
@@ -49,8 +50,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      # UPDATED ↓↓↓
       - name: Download build artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: production-build
           path: build
@@ -63,3 +65,4 @@ jobs:
             --project ${{ secrets.VERCEL_PROJECT_ID }} \
             --org ${{ secrets.VERCEL_ORG_ID }} \
             --confirm
+
