@@ -64,4 +64,4 @@ jobs:
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
         run: |
           npm install -g vercel
-          vercel deploy --prod --yes
+          vercel deploy --prod --yes --token=$VERCEL_ACCESS_TOKEN
