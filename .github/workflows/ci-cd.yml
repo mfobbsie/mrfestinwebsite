@@ -40,7 +40,7 @@ jobs:
           path: dist/
 
   deploy:
-    name: Deploy to Vercel
+    name: Ship to Vercel
     needs: install-build-test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
